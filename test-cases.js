@@ -1,8 +1,4 @@
 
-xtest("missing character 'x'", () => {
-  expect(isPangram('a quick movement of the enemy will jeopardize five gunboats')).toBe(false);
-});
-
 xtest("another missing character, e.g. 'h'", () => {
   expect(isPangram('five boxing wizards jump quickly at it')).toBe(false);
 });
