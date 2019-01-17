@@ -13,4 +13,13 @@ describe('Pangram()', () => {
   test("missing character 'x'", () => {
     expect(isPangram('a quick movement of the enemy will jeopardize five gunboats')).toBe(false);
   });
+  test("another missing character, e.g. 'h'", () => {
+    expect(isPangram('five boxing wizards jump quickly at it')).toBe(false);
+  });
+  test('pangram with underscores', () => {
+    expect(isPangram('the_quick_brown_fox_jumps_over_the_lazy_dog')).toBe(true);
+  });
+  test('pangram with numbers', () => {
+    expect(isPangram('the 1 quick brown fox jumps over the 2 lazy dogs')).toBe(true);
+  });
 });
